@@ -1,0 +1,145 @@
+<script>
+
+    // delete user queries
+
+    $("tbody").on("click", ".btn-del", function(){
+        let id = $(this).attr("data-sid");
+       let csr = $("input[name=csrfmiddlewaretoken").val();
+
+      // console.log(id);
+        mythis = this
+      $.ajax({
+        url: "{% url 'delete_query' %}",
+        method : 'POST',
+        data : {sid:id, csrfmiddlewaretoken:csr},
+        success:function(data){
+            //console.log(data);
+
+            if(data.status == 1){
+                console.log("data deleted success");
+                $(mythis).closest("tr").fadeOut();
+            }
+
+            if(data.status == 0){
+                console.log("Unable to delete data");
+            }
+        }
+      });
+    });
+
+
+    // delete ufm
+
+    $("tbody").on("click", ".btn-ufm", function(){
+        let id = $(this).attr("data-sid");
+       let csr = $("input[name=csrfmiddlewaretoken").val();
+
+      // console.log(id);
+        mythis = this
+      $.ajax({
+        url: "{% url 'delete_ufm' %}",
+        method : 'POST',
+        data : {sid:id, csrfmiddlewaretoken:csr},
+        success:function(data){
+            //console.log(data);
+
+            if(data.status == 1){
+                console.log("data deleted success");
+                $(mythis).closest("tr").fadeOut();
+            }
+
+            if(data.status == 0){
+                console.log("Unable to delete data");
+            }
+        }
+      });
+    });
+
+
+    // delete jobs
+
+    $("tbody").on("click", ".btn-jobs", function(){
+        let id = $(this).attr("data-sid");
+       let csr = $("input[name=csrfmiddlewaretoken").val();
+
+      // console.log(id);
+        mythis = this
+      $.ajax({
+        url: "{% url 'delete_job' %}",
+        method : 'POST',
+        data : {sid:id, csrfmiddlewaretoken:csr},
+        success:function(data){
+            //console.log(data);
+
+            if(data.status == 1){
+                console.log("data deleted success");
+                $(mythis).closest("tr").fadeOut();
+            }
+
+            if(data.status == 0){
+                console.log("Unable to delete data");
+            }
+        }
+      });
+    });
+
+
+
+    // add jobs
+    $("#btnsave").click(function(){
+        console.log("Save button clicked");
+        output = "";
+        let nm = $("#titleid").val();
+        let sm= $("#departid").val();
+        let br = $("#descid").val();
+        let reqr = $("#reqrid").val();
+        let csr = $("input[name='csrfmiddlewaretoken']").val();
+
+        if(nm == ""){
+            console.log("Please enter Name");
+        }
+        else if(sm == ""){
+            console.log("Please enter Sem");
+        }
+        else if(br == ""){
+            console.log("Please enter Branch");
+        }
+        else if(reqr == ""){
+            console.log("Please enter Branch");
+        }
+
+        else{
+           // console.log(nm);
+           // console.log(sm);
+           // console.log(br);
+
+           $.ajax({
+            url: "{% url 'add_job' %}",
+            method : "POST",
+            data : {title:nm, department:sm, description:br , requirements:reqr, csrfmiddlewaretoken:csr},
+            success:function(data){
+                //console.log(data);
+
+                x = data.stud_data;
+                if(data.status == 'Save'){
+                    console.log("Form success");
+                    for(let i=0; i<x.length; i++){
+                        output += "<tr><td>" + Number(i+1) +
+                        "</td><td>" + x[i].title +
+                        "</td> <td> <input type='button' value='Delete' class='btn btn-danger btn-sm btn-jobs'  data-sid=" +
+                         x[i].id + ">" ;
+                            
+                    }
+                    $("tbody").html(output);
+                    $('form')[0].reset();   
+                }
+                if(data.status == 0){
+                    console.log("Unable to save form");
+                }
+            }
+           });
+        }
+
+    });
+  
+</script>

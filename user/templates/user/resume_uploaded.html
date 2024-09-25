@@ -1,0 +1,40 @@
+{% extends 'user/base.html' %}
+{% block content %}
+<!doctype html>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-sm-8 mx-auto" style="margin-top: 20px">
+            <div class="container" style="margin-top: 20px">
+            <div class="display-6 text-center mb-4">Aptitude Test Information</div>
+              <!-- <h2 class="mt-3" style="background-color:lightgreen; margin-bottom: 30px;"><center>Aptitute Test Information</center></h2> -->
+              <ul>
+                <div class="">
+                    <li>There will be 15 Aptitude questions covering various topics such as numerical reasoning, logical reasoning, and verbal reasoning.</li>
+                    <li>The total duration for Aptitude test will be <span class="fw-bold">30 minutes.</span></li>
+                    <li>The test will be auto submitted after 30 minutes.</li>
+                    <li>Each question carries equal weightage, and there is no negative marking.</li>
+                    <li>Ensure a stable internet connection before starting the test to avoid any interruptions.</li>
+                    <li>Good luck!</li>                
+                </div>
+
+            </ul>
+                <div class="text-center"> 
+                    <a href="{% url 'test' %}" class="btn btn-primary btn-sm mb-3">Start Test</a>
+                 </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+

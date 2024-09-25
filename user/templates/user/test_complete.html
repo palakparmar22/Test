@@ -1,0 +1,50 @@
+{% extends 'user/base.html' %}
+{% block content %}
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Test Information</h1>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+
+        <div class="col-lg-6">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Technical Test</h5>
+              <ul>
+                <li>Technical test consists of 15 descriptive questions aimed at evaluating your knowledge and understanding of specific technical concepts.</li>
+                <li>The total duration for Technical test will be <span class="fw-bold">60 minutes.</span></li>
+                <li>The test will be auto submitted after 60 minutes.</li>
+                <li>Proofread your answers to eliminate any grammatical or typographical errors that may affect clarity and professionalism.</li>
+                <li>Upon submission, your answers will be evaluated based on the correctness, relevance, and depth of your explanations.</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center"> 
+            <a href="{% url 'technical_test' %}" class="btn btn-primary btn-sm mb-3" onclick="restart_time()">Start Test</a>
+         </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  
+<script>
+    function restart_time(){
+        localStorage.removeItem('startTime');
+    }
+  
+  </script>
+{% endblock content %}
+
+
+
+
+
+
+

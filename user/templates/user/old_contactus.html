@@ -1,0 +1,27 @@
+
+{% extends 'user/base.html' %}
+{% block content %}
+<!doctype html>
+
+<div class="container" style="background-color:Paleturquoise;">
+    <h2 style="margin-top: 70px; background-color: blue;color: white" class="text-center">
+        Techsture Technologies
+    </h2>
+    <div class="row">
+        <div class="col-sm-8 mx-auto" style="margin-top: 40px">
+            <div class="container" style="margin-top: 20px">
+                <div class="container">
+                    <h2 style="background-color:lightgreen; margin-bottom: 30px;"><center>Contact US<center></h2>
+                    <form action="{% url 'contactus' %}" method="post">
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <button type="submit" class="btn btn-primary float-right mb-3 ">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
+
+
+{% endblock content %}

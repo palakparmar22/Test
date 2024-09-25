@@ -1,0 +1,32 @@
+{% extends 'user/base.html' %}
+{% block content %}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-12 col-md-6 col-lg-4" style="min-width: 500px;">
+      <div class="card bg-white mb-5 mt-5 border-0" style="box-shadow: 0 12px 15px rgba(0, 0, 0, 0.02);">
+        <div class="card-body p-5 text-center">
+          <h4>Password Reset</h4>
+          <!-- <p>Your code was sent to you via email</p> -->
+          <form method="post">
+            {% csrf_token %}
+          <div class="col-12">
+             <input type="password" name="password1" class="form-control" placeholder="New Password" required>
+             <input type="password" name="password2" class="form-control mt-2" placeholder="Comfirm Password" required>
+             <input type="text" name="reset_otp" class="form-control mt-2" placeholder="Enter OTP" required>
+             <p class="text-danger mt-2"> {{msg}}</p>
+             <input type="submit" class="btn btn-primary btn-sm" value="Reset Password"></input>
+             <p class="small text-muted mb-0 mt-2">
+              Didn't receive code? <a href="{% url 'resend2' %}">Request again</a>
+            </p>
+          </div>
+
+            </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock  %}

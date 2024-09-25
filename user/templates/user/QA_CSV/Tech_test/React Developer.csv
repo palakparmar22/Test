@@ -1,0 +1,106 @@
+Questions,Answers
+What is React?,It is an open-source front-end JavaScript library most popular for single-page web applications. It is helpful when interactive and complex UIs are built for websites or mobile apps. React.js was released for use in 2015 and since then it has become one of the most trusted and used technologies of recent time. It has built one of the largest developer communities around itself.
+List some of React.js’ features.,"Important features of React.js include:Instead of a real DOM, there is Virtual DOMIt completely renders the HTML files on the server into client HTML pages, in other words, server-side renderingIn React.js, the data can be passed to the other parts of an application only in one direction. In other words, there is a unidirectional flow of data."
+What are the main advantages of React.js?,"The main advantages of React.js are:It enhances the performance of the applicationIt can be used from the client-side as well as the server-sideThe readability of code is higher in React.js because of JSXIt offers easy integration with frameworks such as Angular, Meteor, etc.It is easy to write UI test cases with React.jsIf you can include some practical experience demonstrating the advantages of React.js in this React.js interview question, you are likely to impress the recruiter."
+What is JSX?,"JSX is the syntax extension for Javascript in React.js. With the help of JSX, it is easy to define how the user interface should look. Additionally, with JSX, the file containing the Javascript code can be used to write the HTML structures as well."
+Describe an event in React.js?,"When a user presses a key, clicks the mouse, or performs any action on the machine or when the machine itself triggers an action, these actions are registered as events in React.js.In React.js, we use camelCase to name events, instead of the lowercase in HTMLIn React.js, because of JSX, a function is passed as an event handler, instead of the string in HTML"
+How do Lists work in React.js?,"Lists in React.js are created similar to how they are created in regular Javascript. With lists, data can be displayed in an orderly manner and is useful in displaying menus on websites. For traversing lists, the map() function is used. For example,An array of numbers is taken by the map() function and their value is multiplied by 5var numbers = [2,4,6,8,10]const multiplyNums = numbers.map((number => {return (number*5);});console.log (multiplyNums);Output: The output in Javascript will be logged in the console. The output in the above case is [10, 20, 30, 40, 50]"
+Why are keys used in React.js Lists?,"Keys are used in React.js Lists because:Key helps in identifying what objects have been altered, moved, or deleted from listsWith the help of keys, it is easier to determine which objects must be re-rendered instead of all components being re-rendered all the time.React.js interview questions that ask about the use of a certain function or component in React.js programming are common."
+Is HTML used in React?,"No, it uses an HTML-in JavaScript syntax called JSX (JavaScript and XML) that converts HTML tags to React elements."
+Can you tell two downsides of React?,"It is difficult to integrate with an MVC framework like Rails. Also, users need to have the knowledge about integrating user interface into MVC framework."
+Can you outline the differences between Real DOM and Virtual DOM?,Real DOM and Virtual DOM differ in following ways:
+Explain Flux Concept In React.,It is a new kind of architecture used for client-side web applications. Supports the concept of Unidirectional Data Flow.
+What is Redux in React?,An open-source JavaScript library for front-end development and acts as a container for JavaScript applications that is used for the applications state management.
+Explain the ‘Store’ feature.,It is a feature of Redux that allows the application to save the entire State at one place. This allows you to get regular updates from the store directly.
+What is a high order component in React?,It is an advanced-level technique in React for reusing component logic.
+What is the Presentational segment?,It is a component in React that just renders HTML and its only function is presentation markup.
+Explain Props in ReactJS.,Props in React mean properties. They act as a communication channel from parent to child.
+What does super keyword mean in React?,It is used to call super or parent class.
+What is yield catchphrase in JavaScript?,It is used to delay and resume a generator work.
+List the two types of React component.,Two types of React component are as follows:Function componentClass component
+What is a synthetic event in ReactJS?,It is an object that serves as a cross browser wrapper of the browser’s native event.
+"In Redux, what is an action?","In Redux, an action is an object that contains information about an event that has occurred in an application."
+What are stateless components?,They are pure functions with no render method.
+What is React Router?,It is a library for routing in React.
+Can you list some animation packages in React?,Some animation packages are as follows:React MotionReact Transition GroupReact Spring
+Explain Jest.,Jest is a JavaScript framework  created by Facebook and is based on Jasmine. Its feature-rich API helps to get results quickly.
+What exactly is the dispatcher?,It is the central hub of data flow in a Flux application that acts as a directory of callbacks.
+Explain the callback function.,It is called when setState () has finished. A state can be updated in response to prop changes or server response using setState() method The main purpose is to prevent a component from re-rendering.
+Explain React State.,"It is an object which stores the component’s property values. Also, it decides how the component renders and behaves."
+Can a  State be updated in ReactJS?,"Yes, it can be updated directly or indirectly. To implement this one can use either this. setState function or the updater function."
+What is the use of arrow function in React?,Arrow function helps to create a compact function expression. Also they help predict bugs when passed as a callback.
+List the lifecycle steps of React.,The steps are as follows:InitializationState/Property updatesDestruction
+What are React portals?,They are used to render an element outside its hierarchy using CreatePortalmethod. Hence they allow developers to render outside the hierarchy tree.
+Explain Context.,React Context is a way to share data globally between React components. It achieved this by passing props from parent to child and storing them in a store. Thus child component(s) can use these props through the store.
+What is the use of Webpack?,"Webpack is a command line tool used to bundle different code files and assets into single large file.. It has been built over Node.js and helps minimize Javascript, CSS files, images, etc."
+What is Babel?,It is an open-source JavaScript compiler that converts the latest JavaScript versions to old ones.
+How are ReactJS and React Native different?,"Where ReactJS is a front end open-source JavaScript library for UIs, React Native is an open-source mobile framework for platforms such as Android and iOS."
+How do browsers read JSX files?,"As JSX is a combination of HTML and JavaScript, browsers are unable to read it. And hence a transpiler is needed to convert JSX to Javascript so that browsers can understand."
+What is the most advised way for naming components?,By using reference rather than using displayName because it provides a clear and concise name for the component.
+Mention one difference between Props and State.,State is mutable while Props are immutable. This means that the state is internal and managed by the component while props are external and managed by anything that renders the component.
+What are pure components in ReactJS?,A React component is considered to be pure if it produces the same output when given the same set of state and props.
+What is ‘create-React-app’?,It provides a development environment for creating React applications using the JavaScript features as it creats a basic setup for the application without requiring to configure everything. It is very helpful in building a single-page application in React.
+What does ‘key’ do in React list?,Keys are used for providing identity to list elements.
+Explain children's prop.,Children prop are used to pass data from the parent component to the children component.
+What are error boundaries?,"They help catch errors in child components, log the error and show fallback UI."
+Why will you use empty tags <> </>?,To declare fragments
+Tell us about strict mode.,"It highlights any potential problems in the application. It achieves this by encapsulating a section of your application as a component. While it does not show any visible element in the development mode (does not impact the performance in the production mode as well), it does give warnings."
+What is React Fiber?,It is the new reconciliation engine in React 16 and is used to enable incremental rendering of virtual DOM.
+Can you differentiate between createElement and cloneElement?,"CreateElement creates a new element and returns it, while CloneElement clones an existing element and returns a new element."
+Explain Lifting State Up in React.,"When multiple components need to share the same  data, it is advised to lift the shared state up to their parent. This means when two child components share the same data from their parent, the state is lifted up to the parent instead of the child components."
+Explain stateful components.,"If the behavior of the component holds dependency on the state of the component, we term it as a stateful component."
+"Tell me, how will you memoize a component in React?",We can memoize a component in React using memoization libraries.
+How to use production mode in React?,It can be used through Webpack's DefinePlugin method to set NODE_ENV to production that takes out  propType validation and extra warnings.
+Explain switching components.,"It is a component that renders one of many components. For this you need to use object to map prop values to components. Basically, it allows the user to turn the setting on or off."
+How will you update props in React?,It is not possible as we can’t update props in ReactJS as they are read-only.
+What do you understand by the term ‘Restructuring’ ?,It is a process by which arrays are extracted.
+Can the values of props be updated?,"No, as props are immutable and top-down. This signifies that parent can transmit prop values to a child but the latter can’t modify them."
+Can I use web components in React application?,"Yes, you can. While it is not used by many developers, it is required when using third-party UI components."
+Why is ‘prop-types’ library used?,Allows for run time checkings for props and other similar objects.
+What are React hooks?,"Through React hooks, you don't have to write a class to use State and some other React features"
+What do you know about Controlled Components?,They control the input elements which means the form’s data is managed by the component's state. It takes its value through props and makes alterations through callbacks.
+What are refs?,They are an attribute of DOM elements. It is a function provided by React to access these elements. You might want to use them in case when you want to change the value of a child component  without use of props.
+What can you do to spill the reducers?,We can use event actions.
+How do you implement routing in ReactJS?,"React Router is available as an npm package, and can be added to your application with a single line of code. Once installed, you can define your routes in your application and use the  component to link between them."
+Can you attach a JSX element to other JSX components?,"Yes, you can add JSX elements to other JSX components."
+"With pure components, what is the issue of using render props?","When creating a function inside the render method, it negates the performance of the pure component."
+Explain the windowing technique.,It is a technique that furnishes only a small number of rows at any given time. This reduces the time to re-render not only the elements but also the DOM nodes.
+How can you fetch data with React Hooks?,We can use useEffect that fetches the data through axios from the API.
+What is Formik?,It is a third-party library that aids in form programming and validation.
+Can you list some middleware choices for tackling asynchronous calls in Redux?,"Redux Promise, Redux Saga Redux Thunk"
+Can browsers understand JSX code? Explain.,"No. A transpiler is needed to convert JSX to JavaScript. Web browsers are built to understand and read original JavaScript or JS objects. Since JSX is not a regular JS object, web browsers are unable to read it. For web browsers to read JSX, it must be made compatible by first converting it into regular JS objects. This is achieved by using a transcompiler, such as Babel. While this may seem like a simple ReactJS interview question, knowing answers to such questions can be critical."
+What is one-way data flow in React?,React uses unidirectional data flow which means you can transfer data from parent to child and not the other way around.
+Explain Concurrent Rendering.,"Concurrent rendering is a feature of React that enables components to render, update, and respond to user input simultaneously."
+Are concurrent mode and async mode different?,"They both are the same. Earlier concurrent mode was referred to as ""Async Mode""."
+Can JavaScript urls be used in React 16.9?,"Yes, but it will give a warning in the console."
+Tell us about React Server components.,It is a way to build applications that cover the benefits of both the server and client side.
+What is prop drilling?,It is a situation where the same data is sent at every interdependent level until it reaches the final level.
+What is virtual DOM?,"DOM is the abbreviated version of the Document Object Model. The DOM shows the logical tree structure for an HTML document. There is a node at the end of each tree branch, with every tree node containing one or more objects.In ReactJS, a lighter version of real DOM is stored in the memory. It is called the Virtual DOM. When there are any changes in specific objects, instead of updating all objects, only those specific changes are updated in the real DOM. This increases the efficiency and speed of the program. For a ReactJS interview question like this, if you have the opportunity to illustrate through a diagram, you must, as it shows the depth of your understanding."
+Why do we use keys in Lists?,"The main reason why we use keys in lists are as followsIt is an identifier to find which items have changed, updated, or deleted from listsFind out which items need to be re-rendered"
+Explain React forms?,"React forms allow users to interact with web applications. They help users to enter the information when required. They contain buttons, text fields, checkboxes, etc."
+What are the components in React?,"In a React application, they are independent and reusable bits of code that can be processed separately. A single app may therefore contain multiple components."
+Tell us about MobX.,"It is a simple, scalable, and battle-tested state management solution.It is based on Reactive programming principles.To use it, the following packages need to be installednpm install mobx --savenpm install mobx-React --save"
+How is an application created using ReactJS?,We can use the following steps:Install the ReactJS app on the machine as the ReactJS library installation requires npm. This is because npm or node package manager has several JavaScript libraries including ReactJSInstall Sublime text or any text editor similar to it.Use the command prompt or terminal to install the create-ReactJS-app packageStart the ReactJS app by going to the newly generated directory (my app) and running npm startSet up the component structure and define what components - functional or classes - you will use for your applicationSet up the back-end structure with Ruby-on-Rails APIDefine the App component that will contain two child components - MainContainer and NavSet up the Nav componentSet up the CreateCard component in the controlled form to then set up the MainContainer component as a class componentCreate a fetch request to the back-end using ReactJS’s component lifecycle methodsSet up the ToDoCardContainer component to render all the ToDoCard componentsRender the cards with the ToDoCard componentCreate lists using the addList callback functionRender lists for appropriate cards by rendering the ToDoList componentClick on the list item to check it off once it is completedBe sure to mention all points in detail for such a ReactJS interview question.
+What is the use of eslint plugin for hooks?,"It enforces the Rules of Hooks. Precisely, it is a static code analysis tool for finding out faulty patterns in JavaScript code."
+What are React Dev Tools?,It lets you analyze the component hierarchy and includes component props and state. You can find React Dev Tools  both as a standalone app and as a browser extension.
+Why would you do it if DevTools does not load in Chrome for local files?,"On opening a local HTML file in your browser, you must first open Chrome Extensions and check Allow access to file URLs."
+Tell me some advantages of React over VueJS.,React is better than Vue for following reasonsEasy to testSuitable for mobile appsMore flexible
+What is render hijacking in React?,It is the ability to control what one component will output from another component. Here you wrap a component with a higher order component.
+How can you pass numbers to the React component?,You can pass numbers to React components using curly braces({}) where as strings in quotes
+Explain React memo function.,Using PureComponent or shouldComponentUpdate you can restrict class components from re-rendering when input properties are the same. You can do the same with the React memo function.
+Tell me some benefits of React Router V4.,"Below are the main benefits of React Router V4 module,Provides declarative routing using componentsNo need to manually set historyReduced application size"
+How uncaught errors behave in React 16?,It results in unmounting of the entire React component tree.
+What are default props?,"It is  a React component property to set default values for the props argument. They are used for undefined props only and not for null props.For example,  let us take a button prop and create a color default prop"
+What browser React applications support?,"It supports all popular browsers including Internet Explorer 9 and above. However, it can support old browsers as well through polyfills."
+Is it necessary for keys to be globally unique?,"While you can use the same keys for two different arrays, they don't need to be globally unique."
+What methods are invoked during error handling?,static getDerivedStateFromError()componentDidCatch()
+Do you know the use of the unmountComponentAtNode method?,The unmountComponentAtNode method in React is used to unmount a React component from the DOM and clean up its event handlers and state. This method is often used when cleaning up the DOM after a React component has been removed or replaced.
+"On what condition, do component props defaults to true?","When you pass no value for a prop.For example, these two are equivalent,"
+How will you build a search filter using React?,"You can build a search filter using following steps:First declare React states for input values.For entering the search term, create HTML input stateNow, on Change function update stateAdd Array filter () to list of items with search term value"
+How can you create a simple counter using React?,"A simple counter can be created using following steps:First, create a React state that can store the count value.Then declare JS functions to increment or decrement the value using setState().Finally add HTML buttons with onClick to JSX code."
+How can you display a list in React?,"A list can be created by:First, declare a list of items using JS Array.Now to access each item use  Array.map()Finally, return JSX code for each item"
+How will you create an Image Slider using ReactJS?,"Create an array of objects that contain an id and image URL.To enable pre/next functionality, we decrease or increase the index value of the currently active image.Finally update the active image index using the clicked option."
+What are the steps to add Font Awesome icons in React?,Install font-awesome:Import font-awesome in your index.js file:Add Font Awesome classes in className:
+How will you use TypeScript in create-React-app applications?,"There is built-in support. You just have to pass --typescript option,npx create-React-app my-app --typescript"
+Can the statics object work with ES6 classes?,"No, it works only with React.createClass():"
+How will you make Redux Form initialValues get updated from state?,"For this, we use enableReinitialize : true setting."

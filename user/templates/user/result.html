@@ -1,0 +1,25 @@
+{% extends 'user/base.html' %}
+{% block content %}
+<!doctype html>
+
+<div class="container" style="background-color:white;">
+    <h2 style="margin-top: 70px; background-color: blue;color: white" class="text-center">
+        Techsture Technologies
+    </h2>
+    <div class="row">
+        <div class="col-sm-8 mx-auto" style="margin-top: 40px">
+            <div class="container" style="margin-top: 40px">
+              <h2 style="background-color:lightgreen; margin-bottom: 30px;"><center> Test Result</center></h2>
+                <p>Your score is {{ score }}/{{ num_questions }}</p>
+                <p>Wrong Answers:</p>
+                <ul>
+                    {% for idx in user_wrong %}
+                        <li>{{ idx }} </li>
+                    {% endfor %}
+                </ul> 
+            </div>
+        </div> 
+    </div>
+</div>
+
+{% endblock content %}

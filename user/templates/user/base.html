@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Techsture Technologies India Pvt. Ltd</title>
+  <meta content="" name="description">  
+  <meta content="" name="keywords">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script srcd="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/logo_1.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/simple-datatables/style.css' %}" rel="stylesheet">
+
+  <link rel="shortcut icon" href="{% static 'assets1\css\bootstrap\bootstrap-grid.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets1\css\bootstrap\bootstrap-reboot.css' %}">
+  <link rel="stylesheet" href="{% static 'assets1\css\bootstrap\bootstrap.css' %}">
+
+  <link rel="stylesheet" href="{% static 'assets1/css/backend-plugin.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets1/css/backend.css' %}">
+
+  <link rel="stylesheet" href="{% static 'assets1/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets1/vendor/remixicon/fonts/remixicon.css' %}">
+  
+  <link rel="stylesheet" href="{% static 'assets1/vendor/tui-calendar/tui-calendar/dist/tui-calendar.css' %}">
+  <link rel="stylesheet" href="{% static 'assets1/vendor/tui-calendar/tui-date-picker/dist/tui-date-picker.css' %}">
+  <link rel="stylesheet" href="{% static 'assets1/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css' %}">  
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center">
+        <img src="{% static 'assets/img/favicon_techsture.png' %}"  alt=""> 
+        <span class="d-none d-lg-block" >
+          <div class="col"><div class="row" style="font-size: 20px;">&nbsp; Techsture Technologies</div><div class="row" style="font-size: 15px;">&nbsp; &nbsp; India Pvt. Ltd.</div></span></div>
+          
+      </a><i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon--> 
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <!-- <img src="{{ request.session.logprofile }}" alt="Profile" class="rounded-circle"> -->
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAsAMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABgcBBAUCA//EAEAQAAEDAwAFCAcFCAIDAAAAAAEAAgMEBREGEiExQRMiUWFxkaHBBxQyUoGx0RYjVWJyJEJDU2OCkuEV4jPC8P/EABoBAQACAwEAAAAAAAAAAAAAAAAEBQIDBgH/xAAyEQACAgECAwQJBQADAAAAAAAAAQIDBAUREiExE0FRUhQiMmFxgZGhsSNCwdHwMzTh/9oADAMBAAIRAxEAPwC8UAQBAEAQBAEAQGCcAlAaFRebdTHVnr6dh6NcZW6GNdP2YtmmV9UesjSdpdZGHBrcn8sTz8gt607Kf7fujU82hfu/Jhul9jfurgP1RPHkj07KX7fugs2h/u+zN2nvVtqTiCup3k7hrhaZ410Pai0bY31S6SOgDsytBuMoAgCAIAgCAIAgCAIAgCAIAgNWurqWgpzPVztijHF3HsHFZ11TtlwwW7MJ2RrW8mQ266cvOWWqAAfzph8m/VXNGkLrc/kv7Ky3UX0rX1/ojM9bc7tLqSTVFS4/wmE4/wARsVnCmjHW6SX+8SDKy21822blLopeajBbQ8m08ZXtb4b/AAWqepY0eXFv8DZHCvl+36nQZoJdCOfUUzeoEnyUd6vSuiZuWnW+KD9BLm0cyamcetxHki1envTD063uaOfVaKXmnyTRcq0cYntd4b/BSIajjS/dt8maZYV6/aakFdc7TLqxTVFM4fw3Zx/idi2TqovW7SfvMI2W0vk2iS2vTp41WXSAOb/NhG0drfp3Ktv0hdan8mTatRfSxfQmVDX0tfAJ6SdksZ4t4dvQqayqdUuGa2ZZwsjNbxZtLAzCAIAgCAIAgCAIAgME4QEf0k0np7QDBEBNWEbIwdjet30U/DwZ5D4nyj4/0Q8nLjTyXN/7qV/LJcr9cNokqqh3stG5o6uACv4xpxK/BFPJ2ZE/Fkts+g0TQJbrKZH/AMmM4aO07z4Kpv1aUuVK2XiWNOnpc7H8iWUtHT0cYjpYY4WD92NoCqbLJ2Peb3LGEIwW0VsfcDCxMjKAIDBGUB8Kqip6yMx1UMczeh7QVnCydb3g9jGUIz9pbkTvGg8TwZbVJyb8f+GQ5Yew8Fa4+qyXK5b+8rrtOi+df07iJRyXGxV/N5SmnbvY7c4dfBwVvKNGXX5l/voVyduPLwZYGjek0F2aIZQIawDbHnY/rb9Fz2Zgzx3uucS4xsuN3J8pEgBUEmGUAQBAEAQBAEBgoCN6W6RC1Q+r0rmurZG7OPJj3j5BWGDhdvLin7K+5Cy8rslwx6v7EHs9qrL7WlrC4jOZp37dXPzKvMjJrxYfhFVTTPIny+pZlntNJaqcQ0seCfbefaeesrmb8id8+KbL2qmFUdonRAxuWk2hAEAQBAEAQGMBAaF4tNJdqcw1UednNePaZ2FbqMiyiXFBmq2mFsdpFZXi1VdirmteTjOtDO3ZnHmumx8mvKrf3RR3Uzx58/kyc6I6RC7Q+r1OG1cQ2/1B7wVHnYXYS4o+y/sWmJldquGXtEkVeTQgCAIAgCAIDnX26RWq3SVUmHOGxjM+07gFux6HfYoI032qqDkyr6aGsv8AdtXWLp5naz3kbGjiewLqLJV4lO/ciijGeRZ72WpardBa6NlNStw1u88XHiT1rlrrp3Tc5F/VVGuPDE3VqNgQA7EBxL9pHQ2gajyZagjIhjIz8ehTMbBtyOnJeJGvyoU9eb8CJVOnFzkcfV44IG8Bq657yreGkUpes2ytlqFr9lbHmn03usbhyzYJW52gs1fEL2ek0NeruhHULU+ezJTYdKqK6vELwaapO6N7gQ79J4qqydPtoXF1RYY+ZC7l0ZIAcqASzKAIDRuttgulHJTVTcscNjhvaeBC203TpmpwNdtUbY8MiramCssV21C4tngdrMeNgcOBHUV1Nc68qnfuZQSjOizbvRZ9iukV1t0dVHhrjsezPsO4hcxkUSoscGXtFytgpI6K0G4IAgCAIAgKy05uZrboaaNxMFJluzcX8T8Ny6TS6Ozp431l+Cjzru0s4V0RKNCLOKG3CqmbioqQHHO9reA81WalkdtbwJ8ok7BoVdfE+rJKq4nBAEBxdKLx/wAPbXSMwZ5DqRDr6fgpeFjekW8L6LqRsq/sa9+8qyWSSaV8sr3PkedZznHaSurjGMVwxXI59tttvqeVmeBABsIIOCNxHBeNJ8mCy9Db2650Loqh2aqDY4++3g7yXL6jirHs3j7LL3DyHbDaXVEkVeTQgCAjOm9nFdbTVQtzU0wLhje5vEeasdNyext4X0kQc6jtK+JdURnQe6epXX1Zzvuavm9QfwPx3dys9Ux+0q411j+CDgXcFnD3MswblzZeBAEAQBAaV3rBQW6pqj/CYSOs8PHC2U1O22MF3mu2zs63J9xV1gonXW9U8UnOD38pKelo2nv3fFdTlWKihteGyKGit3WpP4stxgwMAYA4Lkjoj0gCAICufSJO595hg/cigDsdbic+AC6HSIJUufi/wUuoybtS8ERZXBXhAEAQHd0InMGkUAG6Vjo3D4Z+bQq3VIcWO/dsyZgy2uXvLSXMF8EAQHl4BGCMg70BUd+onWu91EMfNDX8pER7u8d274LrcW1X0KT+Bzt8OytcV8i0bRWi4W2mqh/FjDiOg8R35XLX19lbKvwL6qfaVqRurWbAgCAICK+kKoMVmZCP40oB7Bt8grPSYcV/F4IgahLarbxOZ6N6bWqKyqI9hrY2/HJPyHepWsWcow+ZH02HrSl8ieqiLcIAgCArj0iQOZe4ZtXmSwAA9bSc+BC6LSJp0uPgyl1GLVql4oi6tyvCAIAgO5oVCZtI6cgbI2ukPUMY+ZCrtTnw4z9+yJeCt717i01y5fhAEBgjIQEC9JFNq1FFVNG17XRuPWMEfM9yvdHn6sofMqdSit4yOp6Pagy2V0JOeQmIHYdvmVF1WHDfxeKN+nS3q28CVKsJ4QBAEBBPSXIeUt0QOwiR2P8AEeZV5o0fbfw/kqdTlzhH4/wdD0dR6tmlfxfO49wA8lH1aW96XuN2nLapv3krVWWAQBAEBw9K7QbtbS2PHrER14uGT0fH6KZg5Po9u76PqRcuh3V7LqirXNdG9zJGlr2nDgdhB6F1cZKS3RQNbGFkeBAF43selkaF2V1to31FSzVqajGW8WM4DzXMallK+zhg+S/Jd4WO6ocUurJOq4nBAEAQEV9IsQdZYpNuY52kfEEK00l/rteKIGor9JP3nP8ARq/MlwizsAjcB26w8lI1mPsP4/waNMlzkvh/JOlRlsEAQBAQH0lj9stx/pyDxar7RvZn8v5KjU/aj8/4Ox6PiDYAOImeoeq/9j5Ik6f/AMPzZJlWk4IAgGUBoXO50Vsi5StnbGDuG9x7ANpW2miy57Vrc1WWwrW8mRyalsulwdLTSmnrRsOwBxxxLeI61YxsysD1ZLeP2/8ACE4UZfOL2kcWp0Lu8TsQthqG8Cx+qfFToarjyXrboiy0+5PlzPFPoZeZHASRRQtztL5QfllZT1THiuTb+R5HAufXkdmG12bRYMqrlOamrzzG6u4/lb5lQZZGTnbwqW0f93kqNNGL69j3f+7iUWy6UVzh5SjnbIOI3Ob2g7Qqy7Hsoe1i2J1V0LVvFm9lajaEAQBARn0gkf8AAYPGZqstK/7HyIOof8PzOP6NQfW7g78kQ8XKZrPsQ+L/AII2mL15/L+SfKhLcIAgCAhfpKhzS0U+PZkczPaP9K40ee05R8Ss1KPqxkevRtPmjrYCecyUPx1OH/UrzWI/qRl4oabL1ZR/3QmSqCzCAwTgICM6VaTsteaakAkrC3bxbH1nr6lY4WA7/Xnyj+SDlZiq9WPUrupqJqqZ01TK+WV29zjldJXXGuPDFbIpZSlKXFLmzwx743h8TnMe3c5pwR2FZSipLZnibT3R2qXSy80zQ31kStAwOVaHHv3qDPTMaXPbb4EqGbdHlvuZqdLbzUM1fWWxDpiYAe9eQ0zGg99t/ieyzrpd5xZZJJpDJNI+R53ve4uJ+JU+MVFbJbIiNtvds9U1RNSzNnppXxStOxzTj/7sWNlUbE4yW6PYzlF7xezLE0V0nZdMU1Xqx1g6PZk6x19S5vNwJUPihzj+C7xctW+rLqSYFVxNMoAgIb6SZ8UdFTg7Xyl5HU0f9grjR4b2Tl4IrNSl6sYnn0bQkUtZOR7cjW9wJ/8AZNZnvOERpsfVlImipyzCAIAgOFpnSGrsFU1gy+MCVo/TtPhlTNPs7PIi338iLmQ46WRDQOtFNe+ROxtSws/uG0eaudVq4qOJdxW4E+G3bxLLG5c0XhlAcbSe8C0W0yNwZ5DqQt68b/gpWHjPIt4e5dSNk39jXv3sqp73yyPkle573nLnOO0krrYxUVskc+2292zCyPAgCAIAgCAzG98UjZI3OY9py1zTtBWMoqS2a5Hqbi90WroveBeLaJXANnYdSZvQ7p7CuSzMZ49rj3PodBi39tDfvOyopJMHcgK008rfWb3yTCC2mZqZ6Cdp8l0mlVcNHE/3cyjz7OK3bwJfobSGksFMHDDpcykfq2jwwqjULO0yZbd3IscKHBRHf4ndUIlhAEAQHl7Gva5rhkEYI6UT25o8a3WzKguNNNZr1JGzmvp5deN3SM5auupsjk0KT71z/k5y2EqbWvB8i1bTXR3G3w1cR2SNyR0HiFyt1TpscH3HQVWKyCmu82+C1mwrDTavNXfJIQfu6Ycm0de9x79nwXTaXSq6FLvfMos6zjta7kcBWZCCAIAgCAIAgCA7+hFe6jvkcRP3VT924de8Hy+KrdUpVlHF3rmTcG3gt28SzxuXMF6al2r4rfb5quU82NuQPePAfFbKanbYoR7zXbYq4OTKrttPLebzFG86zqiXXld0DOXFdTdOOPQ2u5bIoK4O61LxZb0bWsY1rAA1oAA6AuTbbe7OiS2XI9Lw9CAIAgCAiGntoNTSNuMA+8px95s2uZ/rarXS8ngn2cuj/JXZ9HFHtF3fg4uhF7bQ1fqVS7FPO7mEnYx/0Pzwpup4jsj2keq/BGwcjs5cEujLI4LnS6KYr5DNXVMrt7pXHPxXZ0pRrivcjmLG3Ns+C27mOzCbjZhNxswm42YTcbMJuNmE3GzCbjZn3oJDDXU0jd7JWnxWq5KVck/Ayg+GSfvLmDti4s6crnTe9iuqhRUzs08DueRue/6D6rotMxOyj2k1zf4KXOyO0lwR6I7OgNoNPSOuM7cS1AxGD+6z/f0UPVMnjn2UekfySdPo4Icb6v8ABLwqosQgCAIAgCA8vALSHDIIwQUBWGllidaasywt/Ypncz8h90+S6bT8tXw4Ze0ihy8Z1S3Xss72h+kwqBHbrg/EoAbDIf3xwB6/n2qBqGDwN219O9eH/hMw8vi/Tn17mdw6NWVxJNuhJJydh3qGs7IX72SvRKPKh9mLJ+GwdxT0/J87PPQ6PKh9mLJ+GwdxT0/J87HodHlQ+zFk/DYO4p6fk+dj0OjyofZiyfhsHcU9PyfOx6HR5UPsxZPw2DuKen5PnY9Do8qH2Ysn4bB3FPT8nzseh0eVD7MWT8Ng7inp+T52PQ6PKh9mLJ+GwdxT0/J87HodHlQ+zVla5rm26EEHIIB2I87J87HolHlRw9L9JhAx1vtz8zHmyyNPsDiB1/JTNPwOP9Wzp3EbMy1H9OHU4GilhddaoSzN/Y4iNc/zD7v1U/PzOwhwx9p/b3kPDx+2lu+iLQjaGtAAwBsAXMl8ekAQBAEAQBAEB8KymirKd9PURh8TxhzTxWUJyhJSi9mYyipLha5FZaSaPT2aUyMBkoyebLxb1O+q6bDzo5C4Xyl4eJRZOLKl7rmjpaO6YPpgymuxMkQ2NnxlzR+bpHWouXpak+Onk/A34+dwrhs6ePeTylqYaqFs1PK2SN25zDkKjlGUHtJbMtoyjJbxZ9QQViZGUAQBAEBjIQHyqqmGlgdNUStjjbvc44AWUYym+GK3ZjKUYreT2IJpFpg+pD6a0l0cR2OnOxzv09Hx2q8xNMUHx3c34FVkZzkuGvocvRzR2ovMwkeHR0gPPk4u6m9fWpWZnRx1wrnLw/sj42K7nu+hZ1HSxUdOynp4wyJgw0BczOcrJOUurL2EVCPDHofdYmQQBAEAQBAEAQBAeJYmSscyRrXMcMFpGQQibT3R40mtmQm+6FaxdUWhwBO0wPds/tPkVdYuq7Lhu+pWX6f1df0ItFPcbHVEMdLSzA85hGx3aNxVrKFOVDdpSRXxlbRLlumSa3adyNwy4UjX/wBSA48D9VWXaOutcvqTq9RfSa+h3qbS+yzgZq+Sd0Ssc3xxjxUGenZMf27/AAJcc6iXft8TfZebbJ7FfTO7JQo7x7l1g/oblfU+kkZkvFtj9uvpm9soRY9z6Qf0DurXWSOfU6X2Wnz+1cq73YmOdn44x4rfDTsmX7dviaZZ1Ef3HBuOnj3ZbbqQN/qTOz4D6qfVo/fZL6ESzUX0gvqRqaouV7qgHOmqpSebG0Z1ewbgrKMKcWHLaKILlbfLnzZKbFoThzZ7w4EjdTsOR/cePYFV5Wqt+rT9f6LCjT+fFb9CaxxMiY1kbWsa0YDWjAAVK2292WaSS2R7Q9CAIAgCAIAgCAIAgCAxgIDXrKGlrY+Sq6eOZnQ9ucLOuydb3g9jCcIzW0luRqv0FoZyXUk8tOfdI12/XxVlVq9seU0n9iFZp1cucHt9zi1Og1zjd9xJTzDp1i0qbDVqH7SaIstPtXstM0n6JXwbPUNbslZ9VIWpYvm+zNTwr/Lv9AzRG+OOPUdQfmkZ5Eo9SxfN+f6PFhX+X8G7T6DXORw5aSniHTrFxUeerUr2U2bo6fY+uyO1Q6C0UB1qyeWpdxaOY36+KhW6vdLlBbfdkmvTq17T3JNSUNLRx8nS08cLOhjcZ7elVtlk7HvN7k6FcYLaK2PuABuCwMzKAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCA//2Q==" alt="Profile" class="rounded-circle">
+
+            {% if request.user.username != "AnonymousUser" %}
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{ request.user.username }}</span>
+            {% endif %}
+            
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              {% if request.user.username != "AnonymousUser" %}
+              <h6>{{ request.user.username  }} {{ request.session.loglastname  }}</h6>
+              <span>{{ request.user.email  }}</span>
+              {% endif %}
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>     
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="https://techsture.com/contact_us" target='blank'>
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="/signout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Log Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+
+  <aside id="sidebar" class="sidebar">
+    <div class="data-scrollbar" data-scroll="1">
+      <nav class="iq-sidebar-menu">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <!-- <a class="nav-link collapsed" href="/">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a> -->
+        <a class="nav-link collapsed" href="/signup">
+          <i class="bi bi-card-list"></i>
+          <span>Register</span>
+        </a>
+        <a class="nav-link collapsed" href="/signin">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+        <a class="nav-link collapsed" href="/apt_info">
+          <i class="bi bi-fast-forward"></i>
+          <span>Test Information</span>
+        </a>
+        </a>
+        <a class="nav-link collapsed" href="/current_openings">
+          <!-- <i class="bi bi-person-arms-up"></i> -->
+          <i class="bi bi-mortarboard-fill"></i>
+          <span>Careers</span>
+        </a>
+        <a class="nav-link collapsed" href="/about">
+          <i class="bi bi-info-circle"></i>
+          <span>About</span>
+        </a>
+        <a class="nav-link collapsed" href="/contactus">
+          <i class="bi bi-person-lines-fill"></i>
+          <span>Contact US</span>
+        </a>
+
+        {% if request.user.is_masteruser %}
+        <a class="nav-link collapsed" href="/usermgnt">
+          <!-- <i class="bi bi-person-lines-fill"></i> -->
+          <i class="bi bi-building"></i>
+          <span>User Management</span>
+        {% endif%}
+        </a>
+
+        {% if request.user.is_admin %}
+        <a class="nav-link collapsed" href="/hr">
+          <!-- <i class="bi bi-person-lines-fill"></i> -->
+          <i class="bi bi-front"></i>
+          <span>HR Page</span>
+        {% endif%}
+        </a>
+
+      </li>
+      {% for item in request.session.menubar %}
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="{{ item.1 }}">
+            <i class="{{ item.2 }}"></i>
+            <span>{{ item.0 }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  </div>
+  </aside>
+
+
+
+  <!-- {% if usermenubar %}
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      {% for item in usermenubar %}
+        <li class="nav-item">
+          <a class="nav-link " href="{{ item.1 }}">
+            <i class="bi bi-grid"></i>
+            <span>{{ item.0 }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+  {% endif %} -->
+
+ 
+{% block body %}
+
+ 
+{% block content %}
+
+{% endblock content %}
+
+
+{% endblock body %}
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/apexcharts/apexcharts.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/chart.js/chart.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/echarts/echarts.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/quill/quill.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/simple-datatables/simple-datatables.js' %}"></script>
+  <script src="{% static 'assets/vendor/tinymce/tinymce.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets1/js/calendar.js' %}"></script>
+  <script src="{% static 'assets1/js/backend-bundle.min.js' %}"></script>
+  <script src="{% static 'assets1/js/table-treeview.js' %}"></script>
+  <script src="{% static 'assets1/js/customizer.js' %}"></script>
+  <script async src="{% static 'assets1/js/chart-custom.js' %}"></script>
+  <script async src="{% static 'assets1/js/slider.js' %}"></script>
+  <script src="{% static 'assets1/js/app.js' %}"></script>
+  <script src="{% static 'assets1/vendor/moment.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="{% static 'assets/js/table2excel.js' %}"></script>
+  <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+
+  <!-- <script src="{% static 'assets1/js/calendar.js' %}"></script> -->
+  
+</body>
+
+</html>

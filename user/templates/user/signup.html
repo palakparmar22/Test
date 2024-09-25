@@ -1,0 +1,73 @@
+{% extends 'user/base.html' %}
+{% block content %}
+
+<!doctype html>
+{% load static %}
+
+<div class="container mt-5" style="background-color: Paleturquoise  ">
+  <div class="row">
+      <div class="col-sm-6 mx-auto" style="margin-top: 70px">
+          <form action="{% url 'signup' %}" method="post">
+              <h2 style="background-color: lightgreen; margin-bottom: 30px;" class="text-center">Sign up!</h2>
+              {% csrf_token %}
+              <div class="form-group first">
+                <label for="username">Username</label>
+                  {{ form.username }}
+              </div>
+
+
+              <div class="form-group first">
+                <label for="email">Email</label>
+                  {{ form.email}}
+              </div>
+
+              <div class="form-group last mb-4">
+                <label for="password">Password</label>
+                  {{ form.password1 }}
+              </div>
+
+              <div class="form-group last mb-4">
+                <label for="password">Confirm Password</label>
+                  {{ form.password2 }}
+              </div>
+
+              <div class="d-flex mb-5 align-items-center">
+                <label class="control control--checkbox mb-0"><span class="caption">HR</span>
+                    {{ form.is_hr }}
+                  <div class="control__indicator"></div>  
+                </label>
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <label class="control control--checkbox mb-0"><span class="caption">Candidate</span>
+                    {{ form.is_candidate }}
+                  <div class="control__indicator"></div>
+                </label>
+              </div>
+
+              {% comment %} <div class="d-flex mb-2 align-items-center">
+                <label class="control control--checkbox mb-0"><span class="caption">Employee</span>
+                    {{ form.is_employee }}
+                  <div class="control__indicator"></div>
+                </label>
+              </div> {% endcomment %}
+
+              <div class="pull-right">
+                <button type="submit" class="btn btn-success float-right my-3">Register</button>
+            </div>
+            <p class="small mb-0">Already have an account? <a href="{% url 'signin' %}">Log in</a></p>
+            
+          </form>
+
+          <span class="mb-5" style="color: red;">
+            {% if msg %}
+                {{ msg | safe }}
+            {% endif %}
+          </span>
+          <span class="text-error">{{ form.errors }}</span>
+
+      </div>
+  </div>
+
+</div>
+{% endblock content %}

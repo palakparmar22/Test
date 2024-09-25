@@ -1,0 +1,61 @@
+{% extends 'user/base.html' %}
+{% block content %}
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Test Information</h1>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Aptitute Test</h5>
+              <ul>
+                <li>There will be 15 Aptitude questions.</li>
+                <li>It will cover various topics such as numerical reasoning, logical  &nbsp;reasoning, and verbal reasoning.</li>
+                <li>The total duration for Aptitude test will be <span class="fw-bold">30 minutes.</span></li>
+                <li>The test will be auto submitted after 30 minutes.</li>
+                <li>Each question carries equal weightage, and there is no negative marking.</li>
+                <li>Ensure a stable internet connection before starting the test to avoid any interruptions.</li>
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Technical Test</h5>
+              <ul>
+                <li>Technical test consists of 15 descriptive questions aimed at evaluating your knowledge and understanding of specific technical concepts.</li>
+                <li>The total duration for Technical test will be <span class="fw-bold">60 minutes.</span></li>
+                <li>The test will be auto submitted after 60 minutes.</li>
+                <li>Proofread your answers to eliminate any grammatical or typographical errors that may affect clarity and professionalism.</li>
+                <li>Upon submission, your answers will be evaluated based on the correctness, relevance, and depth of your explanations.</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class=""> 
+          <h4 class="text-danger">Note: If you change tabs during test then you will be forcefully signout</h4>
+            <!-- <a href="{% url 'test' %}" class="btn btn-primary btn-sm mb-3">Start Test</a> -->
+         </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+{% endblock content %}
+
+
+
+
+
+
+
